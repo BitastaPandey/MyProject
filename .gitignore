@@ -1,6 +1,9 @@
 # Byte-compiled / optimized / DLL files
+<<<<<<< HEAD
 ansible_key
 
+=======
+>>>>>>> 77df29bde73cfc69e124983de1e450485acf5d0e
 __pycache__/
 *.py[cod]
 *$py.class
