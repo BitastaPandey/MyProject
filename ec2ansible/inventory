@@ -5,15 +5,15 @@
     # ansible_sudo_pass: qwerty
 
 [web]
-    ec2web01
+    ec2web02
 
 [api]
-    ec2api01
+    ec2api02
 
 [nodes]
-    ec2web01
-    ec2api01
+    ec2web02
+    ec2api02
 
 [localhost]
-    ec2controller01
+    ec2controller02
     
