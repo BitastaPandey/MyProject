@@ -24,6 +24,14 @@ pipeline {
         sh "git pull origin ${BRANCH}"
       }
     }
+   stage('Install Front-End Packages') {
+      steps {
+        dir("${WORKSPACE}/conduit-ui") {
+          echo "Install conduit UI packages"
+          sh "npm install"
+       }
+      }
+    }
   }
 }
 
