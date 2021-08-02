@@ -1,0 +1,24 @@
+pipeline {
+  agent any
+  environment {
+    COURSE = 'Calgary DevOps'
+    BRANCH = 'main'
+    WWWROOT = '/var/www'
+    SSHUSER = 'jenkins'
+    SSHKEY = '/var/lib/jenkins/.ssh/ec2-key-pair.pem'
+  }
+  stages {
+    stage('Audit Tools') {
+      steps {
+        echo "Audit all tools to be use on this pipeline ${BRANCH}"
+        sh "git --version"
+        sh "node --version"
+        sh "npm --version"
+        sh "ansible --version"
+        sh "ng --version"
+        echo "Workspace Folder: ${WORKSPACE}"
+      }
+    }
+  }
+}
+
